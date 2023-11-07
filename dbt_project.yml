@@ -17,4 +17,9 @@ clean-targets:
   - "dbt_packages"
 
 vars:
-  id-columns: ('anonymous_id', 'user_id', 'email', 'context_traits_email')
+  id-columns: ('anonymous_id', 'user_id', 'email', 'context_traits_email', 'phone')
+  ids-to-exclude: ('teste@')
+  schemas-to-include: ()
+  schemas-to-exclude: ()
+  tables-to-include: ()
+  tables-to-exclude: ()
