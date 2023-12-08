@@ -12,8 +12,7 @@
         edge_a,
         edge_a_label,
         edge_b,
-        edge_b_label,
-        {{ dbt_utils.current_timestamp() }} AS  edge_timestamp
+        edge_b_label
     FROM (
         {{ ' UNION DISTINCT '.join(sql_statements) }}
     ) AS  s
@@ -112,8 +111,7 @@
         e.edge_a,
         e.edge_a_label,
         e.edge_b,
-        e.edge_b_label,
-        {{ dbt_utils.current_timestamp() }} AS  edge_timestamp
+        e.edge_b_label
     FROM {{ this  }} AS  e
     INNER JOIN cte_new_id
         ON e.original_rudder_id = cte_new_id.original_rudder_id
