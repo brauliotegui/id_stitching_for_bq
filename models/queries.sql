@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 WITH columns AS (
     SELECT
         column_name AS cn,
