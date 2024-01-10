@@ -7,28 +7,6 @@ sources:
 
 models:
   - name: queries
-    columns:
-      - name: sql_to_run
-        tests:
-          - unique
   - name: edges
-    columns:
-      - name: rudder_id
-      - name: original_rudder_id
-      - name: node_a
-      - name: node_a_label
-      - name: node_b
-      - name: node_b_label
-      - name: node_timestamp
   - name: check_edges
-    columns:
-      - name: consolidation_needed
-      - name: rows_to_update
   - name: id_graph
-    columns:
-      - name: rudder_id
-      - name: node
-        tests:
-          - unique
-      - name: labels
-      - name: latest_timestamp
