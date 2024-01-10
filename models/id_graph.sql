@@ -3,7 +3,7 @@
 SELECT
     rudder_id,
     edge as node,
-    {{ dbt_utils.listagg('DISTINCT edge_label', '","') }} AS label,
+    {{ listagg('DISTINCT edge_label', '","') }} AS label,
     MAX(edge_timestamp) AS latest_timestamp
     
 FROM 
