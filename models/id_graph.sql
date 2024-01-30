@@ -27,7 +27,7 @@ FROM
 
 GROUP BY
     rudder_id,
-    edge
+    node
 ORDER BY rudder_id
 
 /*
