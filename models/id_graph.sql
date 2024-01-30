@@ -3,7 +3,7 @@
 SELECT
     rudder_id,
     edge as node,
-    {{ listagg('DISTINCT edge_label', '","') }} AS label,
+    STRING_AGG(DISTINCT edge_label) AS labels,
     MAX(edge_timestamp) AS latest_timestamp
     
 FROM 
