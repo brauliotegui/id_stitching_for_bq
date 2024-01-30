@@ -2,8 +2,18 @@ version: 2
 
 sources:
   - name: information_schema
+    config:
+      y42:
+        apiVersion: v2
+    meta:
+      experts:
+        users:
+          - mail-product-support@y42.com
+    database: grupo-coutinho
+    schema: y42_IdStitching_e4f360264a97440a82ec3dd58b21d61b
     tables:
       - name: columns
+        identifier: "INFORMATION_SCHEMA.COLUMNS"
 
 models:
   - name: queries
