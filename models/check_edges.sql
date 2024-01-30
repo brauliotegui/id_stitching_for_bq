@@ -4,7 +4,7 @@ SELECT
     COUNT(*) AS rows_to_update,
     CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END AS consolidation_needed
 FROM
-    {{ ref('edges') }},
+    {{ ref('edges') }} AS edges,
     (
         SELECT DISTINCT
             a.edge_a AS edge,
